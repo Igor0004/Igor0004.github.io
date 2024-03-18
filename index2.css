@@ -1,0 +1,325 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Montserrat, sans-serif;
+}
+
+.header{
+    width: 100%;
+    height: 80px;
+    background-color: #464c55;
+    display: flex;
+    align-items: center; /* Центрирование содержимого по вертикали */
+
+    
+}
+.button_singup{
+    width: 100px;
+    height: 35px;
+    border-radius: 5px;
+    border: none;
+    
+    position: absolute;
+    right: 20px; /* Отступ от правого края */
+    
+    cursor: pointer;
+}
+.logo_photo {
+    width: 40px;
+    height: 40spx;
+    border-radius: 10px;
+    
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    margin-left: 10px;
+    background-color: white;
+    
+    transition: width 0.5s ease, height 0.5s ease; /* Анимация при изменении ширины и высоты */
+}
+
+
+.logo:hover {
+    width: 200px;
+    height: 40px;
+}
+#push {
+    opacity: 0;
+    font-size: 25px;
+    margin-left: 60px;
+    margin-top: -40px;
+    font-weight: bold;
+    white-space: nowrap; /* Предотвращает перенос текста на новую строку */
+    overflow: hidden; /* Скрывает изначально текст */
+    animation: fadeInLetters 0.5s forwards; /* Анимация плавного появления букв */
+}
+
+@keyframes fadeInLetters {
+    from {
+        width: 0; /* Начальная ширина текста (буквы не видны) */
+    }
+    to {
+        width: auto; /* Конечная ширина текста (буквы видны) */
+    }
+}
+
+.logo:hover #push {
+    opacity: 1;
+}
+
+
+
+
+
+.poisk {
+    width: 700px; /* Ширина поля ввода */
+    padding: 10px; /* Поля вокруг текста внутри поля ввода */
+    font-size: 16px; /* Размер шрифта */
+    border: 1px solid #ccc; /* Граница поля ввода */
+    border-radius: 5px; /* Скругление углов поля ввода */
+    position: absolute;
+    top: 20px; /* Отступ сверху */
+    left: 330px; /* Отступ слева */
+}
+
+
+.poisk:focus {
+    outline: none; /* Убираем контур при фокусе на поле ввода */
+    border-color: #007bff; /* Изменяем цвет границы при фокусе */
+}
+
+
+
+.slider-container {
+    position: relative; /* Позиционирование относительно родительского элемента */
+    max-width: 1200px; /* Максимальная ширина слайдера */
+    margin: 0 auto; /* Автоматическое выравнивание по горизонтали */
+    overflow: hidden; /* Скрытие содержимого за пределами контейнера */
+  }
+  
+  .slider {
+    display: flex;
+    transition: transform 0.5s ease; /* Плавное перемещение слайдов */
+    padding-bottom: 30px;
+  }
+  
+  .slider img {
+    width: 1200px; /* Ширина изображения */
+    height: auto; /* Автоматическая высота для сохранения пропорций */
+  }
+  
+  .prev-btn, .next-btn {
+    position: absolute; /* Абсолютное позиционирование */
+    top: 50%; /* Расположение по вертикали в середине */
+    transform: translateY(-50%); /* Сдвиг на половину высоты кнопки наверх, чтобы центрировать */
+    background-color: rgba(0, 0, 0, 0.5); /* Цвет фона кнопки */
+    color: white; /* Цвет текста кнопки */
+    border: none; /* Убираем границы */
+    padding: 10px; /* Внутренние отступы */
+    cursor: pointer; /* Изменение вида курсора при наведении */
+  }
+  
+  .prev-btn {
+    left: 0; /* Расположение кнопки "Prev" слева */
+  }
+  
+  .next-btn {
+    right: 0; /* Расположение кнопки "Next" справа */
+  }
+  
+
+.container{
+    /* background-color: #1e324e;  */
+    display: flex;
+    flex-wrap: wrap; /* Для переноса элементов на новую строку при нехватке места */
+    
+    width: 1200px; /* Ширина формы на всю доступную ширину */
+    margin: 50px auto;
+}
+.butcat {
+    width: 260px;
+    height: 120px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 20px 45px 20px;
+    border: none;
+    box-shadow: inset 0 0 0 0 #c5c5c5; /* Задаем начальный цвет фона */
+    transition: transform 0.3s ease, box-shadow 0.4s ease-in-out; /* добавляем переход для изменения цвета фона */
+}
+
+.butcat:hover {
+    transform: scale(1.05); /* Увеличиваем размер блока на 10% при наведении курсора */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3); /* Увеличиваем тень при наведении */
+    box-shadow: inset 0 260px 0 0 #7AA2DE;
+}
+
+
+
+
+
+.kattext{
+    font-size: 22px;
+    
+}
+.photo_kat{
+    width: 80px;
+    height: 80px;
+}
+
+
+
+  
+.kategor{
+    margin-left: 330px;
+    margin-top: -20px;
+}
+
+
+.form_tovar {
+    /* background-color: #8d9db4;  */
+    display: flex;
+    flex-wrap: wrap; /* Для переноса элементов на новую строку при нехватке места */
+    
+    width: 1200px; /* Ширина формы на всю доступную ширину */
+    margin: 50px auto; /* Устанавливаем отступы сверху и снизу на 100px и автоматический отступ по горизонтали для центрирования */
+}
+
+.tovar {
+    width: 260px;
+    height: 330px;
+    background-color: #D9D9D9;
+    border-radius: 10px;
+    margin: 0 20px 45px 20px; /* Отступы: сверху, справа, снизу, слева */
+    display: flex; /* Позволяет дочерним элементам внутри блока быть расположенными в ряд */
+    flex-direction: column; /* Устанавливаем направление элементов в столбец */
+    justify-content: space-between; /* Распределение элементов по вертикали с равным пространством между ними */
+    position: relative; /* Устанавливаем позиционирование для блока */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тень для блока */
+    transition: transform 0.3s ease; /* Добавляем плавную анимацию для свойства transform */
+}
+.tovar:hover {
+    transform: scale(1.2); /* Увеличиваем размер блока на 10% при наведении курсора */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5); /* Увеличиваем тень при наведении */
+}
+
+
+.Name_prod {
+    font-weight: bold;
+    position: absolute; /* Устанавливаем абсолютное позиционирование */
+    bottom: 50px; /* Размещаем текст внизу блока с отступом 20px */
+    left: 10px; /* Отступ слева */
+    right: 10px; /* Отступ справа */
+    white-space: nowrap; /* Предотвращает перенос текста */
+    overflow: hidden; /* Скрывает лишний текст, который не помещается */
+    
+    transition: transform 0.3s ease; /* Анимация при наведении */
+}
+
+.tovar:hover .Name_prod  {
+    transform: translateX(-10px); /* Сдвиг текста при наведении */
+    overflow: visible;
+}
+.price{
+    font-weight: bold;
+    position: absolute; /* Устанавливаем абсолютное позиционирование */
+    bottom: 20px; /* Размещаем текст внизу блока с отступом 20px */
+    left: 10px; /* Отступ слева */
+    right: 10px; /* Отступ справа */
+}
+.photo_tovar{
+    width: 260px;
+    height: 255px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    
+}
+
+
+
+/* Медиа-запрос для мобильных устройств с шириной экрана до 375px */
+@media (max-width: 375px) {
+    .button_singup {
+        width: 80px; /* Уменьшаем ширину кнопки на маленьких экранах */
+        height: 30px; /* Уменьшаем высоту кнопки на маленьких экранах */
+        top: 25px; /* Уменьшаем отступ сверху на маленьких экранах */
+        right: 10px; /* Уменьшаем отступ справа на маленьких экранах */
+    }
+}
+
+/* Стили для устройств с максимальной шириной экрана 767px (телефоны) */
+
+@media (max-width: 700px) {
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    
+    body{
+        
+        font-family: Montserrat, sans-serif;
+    }
+    .header {
+       
+    }
+    
+    .button_singup {
+       
+    }
+    
+    .logo_photo {
+       
+    }
+    
+    .logo {
+       
+    }
+
+    .poisk {
+       
+    }
+
+    .slider img {
+       
+    }
+
+    .prev-btn, .next-btn {
+       
+    }
+
+    .kategor{
+        margin-left: 100px;
+    }
+
+    .form_tovar {
+        width: 700px;
+        margin: 50px 100px;
+        
+    }
+
+    .tovar{
+       
+    }
+    
+    .Name_prod {
+       
+    }
+
+    .price {
+       
+    }
+
+    .photo_tovar {
+       
+    }
+
+    .butcat {
+        
+    }
+}
+

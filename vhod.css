@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Montserrat, sans-serif;
+}
+p{
+    padding: 10px 0;
+}
+a{
+    
+    color: #7AA2DE;
+    font-weight: bold;
+    text-decoration: none;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+}
+input{
+    margin: 10px 0;
+    padding: 10px;
+    border: unset;
+    border-bottom: 3px solid #e3e3e3;
+}
+button{
+    padding: 10px;
+    background: #e3e3e3;
+    border: unset;
+    cursor: pointer;
+}
+/* Рамка и надпись "Пароли не совпадат" */
+.mesg{
+    border: 2px solid #cf6b6b;
+    border-radius: 3px;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Медиа-запрос для мобильных устройств с шириной экрана до 375px */
+@media (max-width: 375px) {
+    form {
+        width: 300px; /* Уменьшаем ширину формы на маленьких экранах */
+    }
+    input {
+        padding: 8px; /* Уменьшаем отступы вокруг текстовых полей на маленьких экранах */
+        font-size: 14px; /* Уменьшаем размер шрифта на маленьких экранах */
+    }
+    button {
+        padding: 8px; /* Уменьшаем отступы вокруг кнопки на маленьких экранах */
+        font-size: 14px; /* Уменьшаем размер шрифта на маленьких экранах */
+    }
+    .mesg {
+        padding: 8px; /* Уменьшаем отступы вокруг сообщения на маленьких экранах */
+        font-size: 14px; /* Уменьшаем размер шрифта на маленьких экранах */
+    }
+}
